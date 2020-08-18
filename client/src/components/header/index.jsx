@@ -4,8 +4,6 @@ import {connect} from 'react-redux'
 import './index.less'
 import { reqWeather } from '../../api'
 import { formateDate } from '../../utils/dateUtils'
-// import memoryUtils from '../../utils/memoryUtils'
-// import storageUtils from '../../utils/storageUtils'
 import LinkButton from '../link-button'
 import {Modal} from 'antd'
 import menuList from '../../config/menuConfig'
@@ -17,7 +15,7 @@ class Header extends Component {
         super(props)
         this.state = {
             sysTime: formateDate(Date.now()),
-            dayPictureUrl: '', // 天气图片的 url
+            dayPictureUrl: '', 
             weather: ''
         }
     }
@@ -31,7 +29,7 @@ class Header extends Component {
         })
     }
 
-    // 启动循环定时器, 每隔 1s 更新一次 sysTime
+    // timer, refresh systime every 1 s
     getSysTime = () => {
         this.intervalId = setInterval(() => {
             this.setState({
