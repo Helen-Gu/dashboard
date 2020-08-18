@@ -72,7 +72,7 @@ class Home extends Component {
         >
           <Card
             className="home-table-left"
-            title={isVisited ? '访问趋势' : '销售趋势'}
+            title={isVisited ? 'visit' : 'sales'}
             bodyStyle={{padding: 0, height: 275}}
             extra={<Icon type="reload"/>}
           >
